@@ -289,6 +289,17 @@
   .chips{display:flex;flex-wrap:wrap;gap:7px}
   .chip{font-size:12.8px;color:var(--award-ink);background:var(--chip-bg);border:1px solid var(--panel-brd);padding:5px 11px;border-radius:8px}
 
+  /* open-source packages */
+  .stnote{font-size:13.5px;color:var(--muted);margin:-8px 0 16px}
+  .pkgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .pkgs .item{margin-bottom:0;display:flex;flex-direction:column}
+  .pkg-name{font:600 15px/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--strong);word-break:break-all}
+  .pkg-name a{color:inherit}
+  .pkg-name a:hover{color:var(--a1)}
+  .pkgs .idesc{flex:1}
+  .pkg-links{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font-size:13px}
+  .pkg-links a{color:var(--a2);border-bottom:1px solid var(--link-brd)}
+  .pkg-links code{font-size:12.5px;color:var(--muted)}
   .pub{padding:15px 0;border-bottom:1px solid var(--hairline-soft);font-size:14px;color:var(--muted)}
   .pub:last-child{border-bottom:none}
   .pub .me{color:var(--strong);font-weight:600}
@@ -333,7 +344,7 @@
     .sub{color:#444}
     .tag{color:#333 !important;background:#f3f4f6 !important;border:1px solid #e5e7eb !important}
     /* sections */
-    section{border-top:1px solid #e5e7eb;padding:11px 0}
+    section{border-top:1px solid #e5e7eb;padding:9px 0}
     .stitle{color:#555;margin-bottom:12px;font-size:11px}
     .stitle::before{background:#111}
     .lede{color:#222 !important;font-size:11.5px;max-width:none}
@@ -350,16 +361,26 @@
     .chip{background:#f3f4f6 !important;border:1px solid #e5e7eb !important;color:#222 !important}
     .pill{background:#f3f4f6 !important;color:#333 !important}
     .row,.pub{border-bottom:1px solid #f1f3f6}
-    .pub{padding:9px 0}
+    .pub{padding:6px 0}
     .row{padding:10px 2px}
     .item{padding:13px 16px;margin-bottom:10px}
-    .award{padding:11px 13px}
+    .award{padding:8px 12px}
     .stitle{margin-bottom:10px}
     .skills{gap:11px}
     .skgrp .sklabel{margin-bottom:7px}
     .chip{font-size:12px;padding:3px 9px}
     /* keep blocks whole across page breaks */
     .item,.award,.pub,.row{break-inside:avoid;page-break-inside:avoid}
+    .pkgs{grid-template-columns:1fr 1fr;gap:10px}
+    .pkg-name{font-size:12.5px;color:#111}
+    .pkg-links,.stnote{font-size:11px;color:#444}
+    .pkg-links a{color:#0f766e !important;border-bottom:none}
+    .pkgs .idesc{font-size:11px;margin-top:5px}
+    .pkgs .item{padding:10px 13px}
+    .pkg-links{margin-top:6px}
+    .pkg-links code{display:none}
+    .stitle{break-after:avoid;page-break-after:avoid}
+    .stnote{break-after:avoid;page-break-after:avoid;margin:-4px 0 8px}
     .grid{gap:6px}
     .lede{font-size:11px}
   }
@@ -387,7 +408,10 @@
     "https://github.com/lanechenhku",
     "https://www.linkedin.com/in/lane-guolan-chen",
     "https://scholar.google.com/citations?user=uR6Voq0AAAAJ&hl=en",
-    "https://www.zhihu.com/people/vssr67"
+    "https://www.zhihu.com/people/vssr67",
+    "https://x.com/unfated2022",
+    "https://www.npmjs.com/package/dsh-claude-project-ui",
+    "https://www.npmjs.com/package/dsh-post-draft-auto"
   ],
   "knowsAbout": [
     "Statistical Genetics",
@@ -473,6 +497,10 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 007.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 015.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
             GitHub
           </a>
+          <a class="cbtn" href="https://x.com/unfated2022" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg>
+            X <span class="mut">@unfated2022</span>
+          </a>
           <button class="cbtn qrtrigger" type="button" onclick="openQR()" aria-haspopup="dialog" aria-controls="qrmodal" hidden>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3M20 14h1M14 20h3M20.5 17v3.5"/></svg>
             <span class="en">WeChat Accounts</span><span class="zh">微信公众号 · 视频号</span>
@@ -480,8 +508,8 @@
         </div>
         <!-- 改联系方式时两处一起改：页头按钮 .contact 与打印/PDF 用的 .printcontact -->
         <p class="printcontact">
-          <span class="en">lanechenhku@gmail.com · lanechen@2health.ai · lanechen@gene2h.com · lanechen.xyz · WeChat lane13318032043</span>
-          <span class="zh">邮箱 lanechenhku@gmail.com · lanechen@2health.ai · lanechen@gene2h.com · lanechen.xyz · 微信 lane13318032043</span>
+          <span class="en">lanechenhku@gmail.com · lanechen@2health.ai · lanechen@gene2h.com · lanechen.xyz · github.com/lanechenhku · x.com/unfated2022 · WeChat lane13318032043</span>
+          <span class="zh">邮箱 lanechenhku@gmail.com · lanechen@2health.ai · lanechen@gene2h.com · lanechen.xyz · github.com/lanechenhku · x.com/unfated2022 · 微信 lane13318032043</span>
         </p>
       </div>
     </div>
@@ -654,6 +682,38 @@
     </div>
   </section>
 
+  <section id="opensource">
+    <div class="stitle"><span class="en">Open Source</span><span class="zh">开源项目</span></div>
+    <p class="stnote"><span class="en">Plugins for DeepSeek Harness (DSH), published on npm under the MIT license.</span><span class="zh">DeepSeek Harness（DSH）插件，以 MIT 协议发布在 npm。</span></p>
+    <!-- 新增开源包：复制一个 <div class="item pkg"> 块，改包名（npm 与 GitHub 链接都用它）和中英文简介即可；PDF 需重新生成。 -->
+    <div class="pkgs">
+      <div class="item pkg">
+        <div class="pkg-name"><a href="https://www.npmjs.com/package/dsh-claude-project-ui" target="_blank" rel="noopener">dsh-claude-project-ui</a></div>
+        <p class="idesc">
+          <span class="en">Brings the Claude-style Projects + Threads experience to DeepSeek Harness, on top of <code>@kyf-eng/dsh-threads</code>: a project board over threads and tasks, project instructions every thread sees, an automatic context brief for each new thread, extra folders mounted per project, and a bilingual zh/en panel.</span>
+          <span class="zh">把 Claude 风格的「项目 + 讨论串」体验搬进 DeepSeek Harness（基于 <code>@kyf-eng/dsh-threads</code>）：跨讨论串与任务的项目看板、每个讨论串都能看到的项目说明、开新讨论串时自动生成的上下文简报、按项目挂载额外文件夹，以及中英双语面板。</span>
+        </p>
+        <div class="pkg-links">
+          <a href="https://www.npmjs.com/package/dsh-claude-project-ui" target="_blank" rel="noopener">npm</a>
+          <a href="https://github.com/lanechenhku/dsh-claude-project-ui" target="_blank" rel="noopener">GitHub</a>
+          <code>npm i dsh-claude-project-ui</code>
+        </div>
+      </div>
+      <div class="item pkg">
+        <div class="pkg-name"><a href="https://www.npmjs.com/package/dsh-post-draft-auto" target="_blank" rel="noopener">dsh-post-draft-auto</a></div>
+        <p class="idesc">
+          <span class="en">A local draft desk for DeepSeek Harness: it pulls sourced facts (bioRxiv DOI, npm package, any URL), the model writes EN + ZH posts and a card, and you paste them into X yourself. Zero dependencies, no X API, no credentials.</span>
+          <span class="zh">DeepSeek Harness 的本地出稿台：先抓取带来源的真实事实（bioRxiv DOI、npm 包、任意链接），再由模型写出中英双语推文和卡片图，最后由你自己复制粘贴到 X。零依赖、不用 X API、不存任何凭据。</span>
+        </p>
+        <div class="pkg-links">
+          <a href="https://www.npmjs.com/package/dsh-post-draft-auto" target="_blank" rel="noopener">npm</a>
+          <a href="https://github.com/lanechenhku/dsh-post-draft-auto" target="_blank" rel="noopener">GitHub</a>
+          <code>npm i dsh-post-draft-auto</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="publications">
     <div class="stitle"><span class="en">Selected Publications &amp; Preprints</span><span class="zh">代表性论文与预印本</span></div>
     <div class="pub">
@@ -684,6 +744,7 @@
       <a href="https://scholar.google.com/citations?user=uR6Voq0AAAAJ&hl=en" target="_blank" rel="noopener"><span class="en">Google Scholar</span><span class="zh">谷歌学术</span></a>
       <a href="https://www.zhihu.com/people/vssr67" target="_blank" rel="noopener"><span class="en">Zhihu</span><span class="zh">知乎</span></a>
       <a href="https://github.com/lanechenhku" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/unfated2022" target="_blank" rel="noopener">X @unfated2022</a>
       <button class="qrtrigger" type="button" onclick="openQR()" aria-haspopup="dialog" aria-controls="qrmodal" hidden><span class="en">WeChat Accounts</span><span class="zh">微信公众号 · 视频号</span></button>
     </div>
     <div class="emails">
