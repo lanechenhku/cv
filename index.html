@@ -8,6 +8,18 @@
 <meta property="og:title" content="Dr. CHEN Guolan (Lane) — Founder & CEO, 2HEALTH AI">
 <meta property="og:description" content="PhD, Statistical Genetics & Machine Learning (HKU). Building the AI Health Agentic Twin (digital twin + AI agents) for predict · prevent · personalize.">
 <meta property="og:type" content="profile">
+<meta property="og:url" content="https://lanechen.xyz/">
+<meta property="og:image" content="https://lanechen.xyz/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dr. CHEN Guolan (Lane) — Founder &amp; CEO, 2HEALTH AI · Gene to Health">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dr. CHEN Guolan (Lane) — Founder &amp; CEO, 2HEALTH AI">
+<meta name="twitter:description" content="PhD, Statistical Genetics &amp; Machine Learning (HKU). Building the AI Health Agentic Twin (digital twin + AI agents) for predict · prevent · personalize.">
+<meta name="twitter:image" content="https://lanechen.xyz/assets/og-cover.png">
+<link rel="canonical" href="https://lanechen.xyz/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -206,13 +218,79 @@
     .when{font-size:11.5px}
     .langtoggle{top:12px;right:12px;padding:8px 13px}
   }
+  /* print / PDF CV — light theme, no chrome */
+  .printcontact{display:none}
   @media print{
-    body{background:#fff;color:#111;padding:0}
-    .langtoggle{display:none}
-    .cbtn,.tag{color:#111}
-    .qrmodal,.qrtrigger{display:none !important}
+    @page{size:A4;margin:12mm}
+    html,body{background:#fff !important;color:#111 !important}
+    body{background:#fff !important;padding:0;font-size:11.5px;line-height:1.5}
+    .wrap{max-width:none;margin:0}
+    /* hide screen-only chrome */
+    .langtoggle,.qrtrigger,.qrmodal,.contact,footer,#cvlink{display:none !important}
+    .printcontact{display:block !important;margin-top:10px;font-size:11px;color:#444;line-height:1.5;word-break:break-word}
+    /* hero */
+    header{padding:0 0 12px}
+    .photo{width:88px;height:88px;border-radius:14px;border:1px solid #e5e7eb;box-shadow:none;background:none}
+    h1{background:none !important;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:#111 !important;color:#111 !important;font-size:25px}
+    .eyebrow{color:#0f766e}
+    .role,.role b{color:#111}
+    .sub{color:#444}
+    .tag{color:#333 !important;background:#f3f4f6 !important;border:1px solid #e5e7eb !important}
+    /* sections */
+    section{border-top:1px solid #e5e7eb;padding:14px 0}
+    .stitle{color:#555;margin-bottom:12px;font-size:11px}
+    .stitle::before{background:#111}
+    .lede{color:#222 !important;font-size:11.5px;max-width:none}
+    .lede b{color:#000}
+    /* cards → white with hairline border */
+    .item,.award{background:#fff !important;border:1px solid #e5e7eb !important;box-shadow:none}
+    .ih h3,.row .l h4,.award .txt b{color:#111}
+    .idesc,.award .txt,.when,.row .l p{color:#444 !important}
+    .row .l p .inst,.idesc a,.pub .venue{color:#0f766e !important}
+    .pub .me{color:#000}
+    .award .yr{color:#0f766e}
+    .chip{background:#f3f4f6 !important;border:1px solid #e5e7eb !important;color:#222 !important}
+    .pill{background:#f3f4f6 !important;color:#333 !important}
+    .row,.pub{border-bottom:1px solid #f1f3f6}
+    /* keep blocks whole across page breaks */
+    .item,.award,.pub,.row{break-inside:avoid;page-break-inside:avoid}
+    .grid{gap:8px}
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lane Guolan Chen",
+  "alternateName": ["陈国蓝", "Lane CHEN"],
+  "honorificPrefix": "Dr.",
+  "url": "https://lanechen.xyz/",
+  "image": "https://lanechen.xyz/assets/og-cover.png",
+  "jobTitle": "Founder & CEO",
+  "worksFor": [
+    { "@type": "Organization", "name": "2HEALTH AI LIMITED", "url": "https://2health.cn" },
+    { "@type": "Organization", "name": "Gene to Health Limited", "url": "https://gene2h.com" },
+    { "@type": "Organization", "name": "CHONPS Health Tech Ltd.", "url": "https://2hai.gene2h.com" }
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "The University of Hong Kong" },
+    { "@type": "CollegeOrUniversity", "name": "Fudan University" }
+  ],
+  "sameAs": [
+    "https://github.com/lanechenhku",
+    "https://www.linkedin.com/in/lane-guolan-chen",
+    "https://scholar.google.com/citations?user=uR6Voq0AAAAJ&hl=en",
+    "https://www.zhihu.com/people/vssr67"
+  ],
+  "knowsAbout": [
+    "Statistical Genetics",
+    "Polygenic Risk Scoring",
+    "Mendelian Randomization",
+    "Machine Learning",
+    "Multi-omics"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -242,6 +320,10 @@
           <a class="cbtn solid" href="mailto:lanechenhku@gmail.com">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
             <span class="en">Email</span><span class="zh">邮箱</span>
+          </a>
+          <a class="cbtn" id="cvlink" href="assets/Lane_Chen_CV_EN.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5v11"/><path d="M7.5 10.5l4.5 4.5 4.5-4.5"/><path d="M4.5 20h15"/></svg>
+            <span class="en">Download CV (PDF)</span><span class="zh">下载简历（PDF）</span>
           </a>
           <a class="cbtn" href="https://2health.cn" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg>
@@ -284,6 +366,11 @@
             <span class="en">WeChat Accounts</span><span class="zh">微信公众号 · 视频号</span>
           </button>
         </div>
+        <!-- 改联系方式时两处一起改：页头按钮 .contact 与打印/PDF 用的 .printcontact -->
+        <p class="printcontact">
+          <span class="en">lanechenhku@gmail.com · lanechen@2health.ai · lanechen@gene2h.com · lanechen.xyz · WeChat lane13318032043</span>
+          <span class="zh">邮箱 lanechenhku@gmail.com · lanechen@2health.ai · lanechen@gene2h.com · lanechen.xyz · 微信 lane13318032043</span>
+        </p>
       </div>
     </div>
   </header>
@@ -291,7 +378,7 @@
   <section id="about">
     <p class="lede">
       <span class="en">Lane CHEN is a serial entrepreneur who has founded three health-technology companies — two in Hong Kong, <b>2HEALTH AI LIMITED</b> and <b>Gene to Health Limited</b>, and one in Guangzhou, <b>CHONPS Health Tech Ltd.</b> As Founder &amp; CEO of the Hong Kong ventures he is building a multi-omics-driven, <b>full-life-cycle human-health Agentic Twin</b> platform, where a lifelong digital twin of each person is paired with AI agents that remember, reason and act, closing the loop of prediction, prevention, proactive intervention and personalized care. He holds a BSc in Biological Sciences from Fudan University and is completing his PhD in Statistical Genetics &amp; Machine Learning at The University of Hong Kong, supervised by Prof. Pak-Chung Sham — a world-renowned geneticist and national-level talent. His research spans polygenic risk prediction, Mendelian Randomization, and statistical-genetics methodology, with first- / corresponding-author publications in journals including <i>Psychological Medicine</i> and <i>Statistics in Medicine</i>. He has led his teams to secure support from the HKSTP Incubation Program and the Greater Bay Area Youth Entrepreneurship funding, along with multiple Hong Kong innovation &amp; entrepreneurship awards. He now drives the companies' product development, R&amp;D, and international commercialization with steady, continuous progress.</span>
-      <span class="zh">陈国蓝是一名连续创业者,先后创立三家健康科技公司——香港的 <b>2HEALTH AI LIMITED</b> 与基因智健(<b>Gene to Health Limited</b>),以及广州的创思健康科技(<b>CHONPS Health Tech Ltd.</b>)。作为两家香港公司的创始人兼 CEO,致力于打造多组学驱动的<b>全生命周期人类健康数字共生体</b>(数字孪生 + AI 智能体),形成“预测-预防-主动干预-个性化医疗”的健康管理闭环。本人拥有复旦大学生物科学学士学位,已完成学业即将取得香港大学统计遗传学与机器学习博士学位(师从世界知名遗传学家、国家级人才沈伯松教授)。研究方向涵盖多基因风险预测、孟德尔随机化与统计遗传学方法学,以第一 / 通讯作者身份在 <i>Psychological Medicine</i>、<i>Statistics in Medicine</i> 等发表论文。本人带领团队获得香港科技园孵化计划、粤港澳大湾区青年创业资助等支持及多项香港创新创业奖项。现主导公司的产品开发、技术研发与国际化商业化拓展,取得持续进步的成绩。</span>
+      <span class="zh">陈国蓝是一名连续创业者，先后创立三家健康科技公司——香港的 <b>2HEALTH AI LIMITED</b> 与基因智健（<b>Gene to Health Limited</b>），以及广州的创思健康科技（<b>CHONPS Health Tech Ltd.</b>）。作为两家香港公司的创始人兼 CEO，致力于打造多组学驱动的<b>全生命周期人类健康数字共生体</b>（数字孪生 + AI 智能体），形成“预测-预防-主动干预-个性化医疗”的健康管理闭环。本人拥有复旦大学生物科学学士学位，已完成学业即将取得香港大学统计遗传学与机器学习博士学位（师从世界知名遗传学家、国家级人才沈伯松教授）。研究方向涵盖多基因风险预测、孟德尔随机化与统计遗传学方法学，以第一 / 通讯作者身份在 <i>Psychological Medicine</i>、<i>Statistics in Medicine</i> 等发表论文。本人带领团队获得香港科技园孵化计划、粤港澳大湾区青年创业资助等支持及多项香港创新创业奖项。现主导公司的产品开发、技术研发与国际化商业化拓展，取得持续进步的成绩。</span>
     </p>
   </section>
 
@@ -304,7 +391,7 @@
       </div>
       <p class="idesc">
         <span class="en">2Health AI: Multi-Omics Driven Clinical Care and Digital Health Agentic Twin. The world's first full-life-cycle, multi-omics-driven human-health Agentic Twin (digital twin + AI agents), connecting a personal app, a doctor-side clinical platform and a wellness &amp; care ecosystem (predict · prevent · intervene · personalize). Company site: <a href="https://2health.cn" target="_blank" rel="noopener">2health.cn</a> · Product — web platform, AI health agent, and mobile apps: <a href="https://2health.ai" target="_blank" rel="noopener">2health.ai</a>.</span>
-        <span class="zh">智健AI:多组学驱动的临床医疗与数字健康智能共生体。全球首个全生命周期、多组学驱动的人类健康数字共生体(数字孪生 + AI 智能体),打通个人端、医生端临床诊疗平台与健康医疗生态(预测 · 预防 · 主动干预 · 个性化医疗)。公司官网:<a href="https://2health.cn" target="_blank" rel="noopener">2health.cn</a> · 产品(网页平台、AI 健康助手、移动应用):<a href="https://2health.ai" target="_blank" rel="noopener">2health.ai</a>。</span>
+        <span class="zh">智健AI：多组学驱动的临床医疗与数字健康智能共生体。全球首个全生命周期、多组学驱动的人类健康数字共生体（数字孪生 + AI 智能体），打通个人端、医生端临床诊疗平台与健康医疗生态（预测 · 预防 · 主动干预 · 个性化医疗）。公司官网：<a href="https://2health.cn" target="_blank" rel="noopener">2health.cn</a> · 产品（网页平台、AI 健康助手、移动应用）：<a href="https://2health.ai" target="_blank" rel="noopener">2health.ai</a>。</span>
       </p>
     </div>
     <div class="item">
@@ -314,7 +401,7 @@
       </div>
       <p class="idesc">
         <span class="en">Innovative translation of statistical-genetics technologies for broad-spectrum health prediction and disease screening. Incubatee of the Hong Kong Science Park (HKSTP). <a href="https://gene2h.com" target="_blank" rel="noopener">gene2h.com</a></span>
-        <span class="zh">创新性地将统计遗传学技术转化落地,用于广谱健康预测与疾病筛查。香港科学园(HKSTP)孵化企业。<a href="https://gene2h.com" target="_blank" rel="noopener">gene2h.com</a></span>
+        <span class="zh">创新性地将统计遗传学技术转化落地，用于广谱健康预测与疾病筛查。香港科学园（HKSTP）孵化企业。<a href="https://gene2h.com" target="_blank" rel="noopener">gene2h.com</a></span>
       </p>
     </div>
     <div class="item">
@@ -324,7 +411,7 @@
       </div>
       <p class="idesc">
         <span class="en">Health-technology venture founded in Guangzhou — the group's mainland China base. <a href="https://2hai.gene2h.com" target="_blank" rel="noopener">2hai.gene2h.com</a></span>
-        <span class="zh">于广州创立的健康科技公司,亦为集团在中国内地的落地基地。<a href="https://2hai.gene2h.com" target="_blank" rel="noopener">2hai.gene2h.com</a></span>
+        <span class="zh">于广州创立的健康科技公司，亦为集团在中国内地的落地基地。<a href="https://2hai.gene2h.com" target="_blank" rel="noopener">2hai.gene2h.com</a></span>
       </p>
     </div>
   </section>
@@ -336,14 +423,14 @@
         <h4><span class="en">PhD — Statistical Genetics &amp; Machine Learning</span><span class="zh">博士 — 统计遗传学与机器学习</span></h4>
         <p>
           <span class="en"><span class="inst">The University of Hong Kong</span> · LKS Faculty of Medicine — Supervisor: Prof. Pak Chung Sham; Co-supervisor: Dr. Dora Yan Zhang</span>
-          <span class="zh"><span class="inst">香港大学</span> · 李嘉诚医学院 — 导师:沈伯松教授;副导师:Dr. Dora Yan Zhang</span>
+          <span class="zh"><span class="inst">香港大学</span> · 李嘉诚医学院 — 导师：沈伯松教授；副导师：Dr. Dora Yan Zhang</span>
         </p>
       </div>
       <span class="when">09/2019 – 10/2024</span>
     </div>
     <div class="row">
       <div class="l">
-        <h4><span class="en">BSc — Biological Sciences (Biostatistics)</span><span class="zh">学士 — 生物科学(生物统计学方向)</span></h4>
+        <h4><span class="en">BSc — Biological Sciences (Biostatistics)</span><span class="zh">学士 — 生物科学（生物统计学方向）</span></h4>
         <p><span class="inst"><span class="en">Fudan University</span><span class="zh">复旦大学</span></span></p>
       </div>
       <span class="when">09/2015 – 06/2019</span>
@@ -354,6 +441,13 @@
     <div class="stitle"><span class="en">Research &amp; Experience</span><span class="zh">研究与工作经历</span></div>
     <div class="row">
       <div class="l">
+        <h4><span class="en">Research Assistant — Prof. Pak Chung Sham&#39;s Lab</span><span class="zh">研究助理 — 沈伯松教授实验室</span></h4>
+        <p><span class="inst"><span class="en">LKS Faculty of Medicine, The University of Hong Kong</span><span class="zh">香港大学李嘉诚医学院</span></span></p>
+      </div>
+      <span class="when">11/2026 – <span class="en">Present</span><span class="zh">至今</span></span>
+    </div>
+    <div class="row">
+      <div class="l">
         <h4><span class="en">Part-time Research Assistant — Dept. of Computing</span><span class="zh">兼职研究助理 — 计算机学系</span></h4>
         <p><span class="inst"><span class="en">The Hang Seng University of Hong Kong</span><span class="zh">香港恒生大学</span></span></p>
       </div>
@@ -361,7 +455,7 @@
     </div>
     <div class="row">
       <div class="l">
-        <h4><span class="en">Analyst — GO-2.0 (Genetics of Osteoarthritis) Consortium</span><span class="zh">分析师 — GO-2.0(骨关节炎遗传学)国际联盟</span></h4>
+        <h4><span class="en">Analyst — GO-2.0 (Genetics of Osteoarthritis) Consortium</span><span class="zh">分析师 — GO-2.0（骨关节炎遗传学）国际联盟</span></h4>
         <p><span class="en">International research collaboration</span><span class="zh">国际科研合作</span></p>
       </div>
       <span class="when">02/2022 – <span class="en">Present</span><span class="zh">至今</span></span>
@@ -369,14 +463,14 @@
     <div class="row">
       <div class="l">
         <h4><span class="en">Student Research Assistant — Centre for Genomic Sciences</span><span class="zh">学生研究助理 — 基因组科学中心</span></h4>
-        <p><span class="en"><span class="inst">HKU</span> · PI: Prof. Pak-Chung Sham</span><span class="zh"><span class="inst">香港大学</span> · 负责人:沈伯松教授</span></p>
+        <p><span class="en"><span class="inst">HKU</span> · PI: Prof. Pak-Chung Sham</span><span class="zh"><span class="inst">香港大学</span> · 负责人：沈伯松教授</span></p>
       </div>
       <span class="when">10/2018 – 04/2019</span>
     </div>
     <div class="row">
       <div class="l">
         <h4><span class="en">Industry Internships — Consulting &amp; Medical Affairs</span><span class="zh">行业实习 — 咨询与医学事务</span></h4>
-        <p><span class="en">Management Consulting (IQVIA) · Medical Affairs, cardiac devices (Genesis MedTech), Shanghai</span><span class="zh">管理咨询(IQVIA)· 医学事务,心脏器械(Genesis MedTech),上海</span></p>
+        <p><span class="en">Management Consulting (IQVIA) · Medical Affairs, cardiac devices (Genesis MedTech), Shanghai</span><span class="zh">管理咨询（IQVIA）· 医学事务，心脏器械（Genesis MedTech），上海</span></p>
       </div>
       <span class="when">2021</span>
     </div>
@@ -386,13 +480,14 @@
     <div class="stitle"><span class="en">Grants, Incubation &amp; Awards</span><span class="zh">资助、孵化与奖项</span></div>
     <p class="idesc" style="margin-bottom:16px;color:var(--muted)"><span class="en">Innovation &amp; entrepreneurship awards / grants below as <b style="color:#fff">team leader / principal applicant</b>.</span><span class="zh">以下创新创业奖项 / 资助均以<b style="color:#fff">团队负责人 / 主要申请人</b>身份获得。</span></p>
     <div class="grid">
-      <div class="award"><span class="yr">2025</span><span class="txt"><span class="en"><b>HK NewGen GBA Youth Entrepreneurship (YEP) grant</b> — HK$300,000</span><span class="zh"><b>香港 民青局大湾区青年创业资助(YEP)</b> — 30 万港元</span></span></div>
+      <div class="award"><span class="yr">2025</span><span class="txt"><span class="en"><b>HK NewGen GBA Youth Entrepreneurship (YEP) grant</b> — HK$300,000</span><span class="zh"><b>香港 民青局大湾区青年创业资助（YEP）</b> — 30 万港元</span></span></div>
       <div class="award"><span class="yr">2026</span><span class="txt"><span class="en"><b>Top 10 · Merit Award</b> — 11th HK Technology Start-up Value-Creation Roadshow</span><span class="zh"><b>十强 · 优异奖</b> — 第 11 届香港科技初创企业价值创造路演</span></span></div>
-      <div class="award"><span class="yr">2025</span><span class="txt"><span class="en"><b>Top 10 · Merit Award</b> — 10th "Maker in China" Int'l Innovation &amp; Entrepreneurship Competition, HK</span><span class="zh"><b>十强 · 优异奖</b> — 第 10 届「创客中国」国际创新创业大赛(香港)</span></span></div>
-      <div class="award"><span class="yr">2023–</span><span class="txt"><span class="en"><b>Incubatee</b> (CEO &amp; Founder, Gene to Health) — HKSTP Incubation Program</span><span class="zh"><b>孵化企业</b>(以 Gene to Health 创始人兼 CEO 身份)— 香港科学园孵化计划</span></span></div>
+      <div class="award"><span class="yr">2026</span><span class="txt"><span class="en"><b>Final Round Excellence Award</b> — 3rd Guangdong–Hong Kong–Macao Greater Bay Area Doctoral and Postdoctoral Innovation &amp; Entrepreneurship Competition</span><span class="zh"><b>决赛优胜奖</b> — 第三届粤港澳大湾区博士博士后创新创业大赛</span></span></div>
+      <div class="award"><span class="yr">2025</span><span class="txt"><span class="en"><b>Top 10 · Merit Award</b> — 10th "Maker in China" Int'l Innovation &amp; Entrepreneurship Competition, HK</span><span class="zh"><b>十强 · 优异奖</b> — 第 10 届「创客中国」国际创新创业大赛（香港）</span></span></div>
+      <div class="award"><span class="yr">2023–</span><span class="txt"><span class="en"><b>Incubatee</b> (CEO &amp; Founder, Gene to Health) — HKSTP Incubation Program</span><span class="zh"><b>孵化企业</b>（以 Gene to Health 创始人兼 CEO 身份）— 香港科学园孵化计划</span></span></div>
       <div class="award"><span class="yr">2022</span><span class="txt"><span class="en"><b>HKU iDendron × HKSTP IDEATION grant</b> — HK$100,000</span><span class="zh"><b>港大 iDendron × 科学园 IDEATION 资助</b> — 10 万港元</span></span></div>
       <div class="award"><span class="yr">2021</span><span class="txt"><span class="en"><b>Cyberport CCMF grant</b> — HK$100,000</span><span class="zh"><b>数码港 CCMF 资助</b> — 10 万港元</span></span></div>
-      <div class="award"><span class="yr">'21–'22</span><span class="txt"><span class="en"><b>National Bronze</b> — 7th &amp; 8th "Internet+" and 9th "Challenge Cup", GBA</span><span class="zh"><b>全国铜奖</b> — 第 7、8 届「互联网+」及第 9 届「挑战杯」,大湾区</span></span></div>
+      <div class="award"><span class="yr">'21–'22</span><span class="txt"><span class="en"><b>National Bronze</b> — 7th &amp; 8th "Internet+" and 9th "Challenge Cup", GBA</span><span class="zh"><b>全国铜奖</b> — 第 7、8 届「互联网+」及第 9 届「挑战杯」，大湾区</span></span></div>
       <div class="award"><span class="yr">2022</span><span class="txt"><span class="en"><b>Top-20</b> Qianhai GBA Youth Competition · <b>2nd Prize</b> 8th HKU I&amp;E Competition</span><span class="zh"><b>前海大湾区青年大赛 20 强</b> · 第 8 届港大创新创业大赛<b>二等奖</b></span></span></div>
     </div>
   </section>
@@ -419,14 +514,14 @@
         <div class="sklabel"><span class="en">Business &amp; Communication</span><span class="zh">商业与传播</span></div>
         <div class="chips">
           <span class="chip"><span class="en">Biotech/healthcare venture analytics</span><span class="zh">生物科技/医疗创投分析</span></span>
-          <span class="chip"><span class="en">Multi-channel media (&gt;4M cumulative reads)</span><span class="zh">多渠道媒体(累计阅读 &gt;400 万)</span></span>
+          <span class="chip"><span class="en">Multi-channel media (&gt;4M cumulative reads)</span><span class="zh">多渠道媒体（累计阅读 &gt;400 万）</span></span>
         </div>
       </div>
       <div class="skgrp">
         <div class="sklabel"><span class="en">Languages</span><span class="zh">语言</span></div>
         <div class="chips">
           <span class="chip"><span class="en">Mandarin — native</span><span class="zh">普通话 — 母语</span></span><span class="chip"><span class="en">Cantonese — native</span><span class="zh">粤语 — 母语</span></span>
-          <span class="chip"><span class="en">English — near-native (~IELTS 8)</span><span class="zh">英语 — 近母语(约雅思 8)</span></span><span class="chip"><span class="en">Spanish — elementary</span><span class="zh">西班牙语 — 初级</span></span>
+          <span class="chip"><span class="en">English — near-native (~IELTS 8)</span><span class="zh">英语 — 近母语（约雅思 8）</span></span><span class="chip"><span class="en">Spanish — elementary</span><span class="zh">西班牙语 — 初级</span></span>
         </div>
       </div>
     </div>
@@ -512,10 +607,22 @@
 </div>
 <script>
   document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* The CV download button points at the PDF that matches the current language. */
+  var cvLink=document.getElementById('cvlink');
+  function syncCVLink(){
+    if(!cvLink) return;
+    cvLink.href = document.documentElement.dataset.lang==='zh'
+      ? 'assets/Lane_Chen_CV_ZH.pdf'
+      : 'assets/Lane_Chen_CV_EN.pdf';
+  }
+  syncCVLink();
+
   function toggleLang(){
     var h=document.documentElement;
     h.dataset.lang = (h.dataset.lang==='en') ? 'zh' : 'en';
     h.setAttribute('lang', h.dataset.lang==='zh' ? 'zh-Hans' : 'en');
+    syncCVLink();
   }
 
   var qrModal=document.getElementById('qrmodal');
