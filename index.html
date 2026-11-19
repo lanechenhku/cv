@@ -69,12 +69,15 @@
     --h1-grad:linear-gradient(100deg,#fff 20%,#bcd3ff 60%,#9fead6 100%);
     --tag-bg:rgba(87,166,255,.10);
     --tag-brd:rgba(87,166,255,.22);
+    --link-brd:rgba(87,166,255,.3);
     --tag-g-bg:rgba(94,231,196,.09);
     --tag-g-brd:rgba(94,231,196,.22);
     --tag-p-bg:rgba(180,140,255,.09);
     --tag-p-brd:rgba(180,140,255,.22);
     --pill-b2c-bg:rgba(94,231,196,.12);
     --pill-b2b-bg:rgba(180,140,255,.12);
+    --pill-b2c-ink:var(--a1);
+    --pill-b2b-ink:var(--a3);
     --toggle-bg:rgba(12,17,32,.72);
     --qrback:rgba(4,7,14,.74);
     --qrpanel-bg:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02)),var(--bg);
@@ -111,12 +114,15 @@
     --h1-grad:linear-gradient(100deg,#0f172a 20%,#1e3a8a 60%,#0b7f6b 100%);
     --tag-bg:rgba(29,78,216,.07);
     --tag-brd:rgba(29,78,216,.22);
+    --link-brd:rgba(29,78,216,.38);
     --tag-g-bg:rgba(11,127,107,.09);
     --tag-g-brd:rgba(11,127,107,.26);
     --tag-p-bg:rgba(109,40,217,.08);
     --tag-p-brd:rgba(109,40,217,.24);
     --pill-b2c-bg:rgba(11,127,107,.13);
     --pill-b2b-bg:rgba(109,40,217,.12);
+    --pill-b2c-ink:#0a6b5a;
+    --pill-b2b-ink:#5b21b6;
     --toggle-bg:rgba(255,255,255,.86);
     --qrback:rgba(15,23,42,.45);
     --qrpanel-bg:linear-gradient(180deg,#ffffff,#f6f7f9);
@@ -254,10 +260,10 @@
   .ih h3 .accent{color:var(--a1)}
   .when{font:500 12.5px/1 'Space Grotesk',sans-serif;color:var(--faint);white-space:nowrap;letter-spacing:.03em}
   .idesc{margin-top:9px;font-size:14px;color:var(--muted)}
-  .idesc a{color:var(--a2);border-bottom:1px solid rgba(87,166,255,.3)}
+  .idesc a,.pub a{color:var(--a2);border-bottom:1px solid var(--link-brd)}
   .pill{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;padding:2px 8px;border-radius:6px;margin-left:8px;vertical-align:middle}
-  .pill.b2c{color:var(--a1);background:var(--pill-b2c-bg)}
-  .pill.b2b{color:var(--a3);background:var(--pill-b2b-bg)}
+  .pill.b2c{color:var(--pill-b2c-ink);background:var(--pill-b2c-bg)}
+  .pill.b2b{color:var(--pill-b2b-ink);background:var(--pill-b2b-bg)}
 
   .row{
     display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap;
@@ -285,7 +291,7 @@
 
   .pub{padding:15px 0;border-bottom:1px solid var(--hairline-soft);font-size:14px;color:var(--muted)}
   .pub:last-child{border-bottom:none}
-  .pub .me{color:#fff;font-weight:600}
+  .pub .me{color:var(--strong);font-weight:600}
   .pub .venue{color:var(--a1);font-style:italic}
   .pub .yr{color:var(--faint)}
 
@@ -337,7 +343,8 @@
     .ih h3,.row .l h4,.award .txt b{color:#111}
     .idesc,.award .txt,.when,.row .l p{color:#444 !important}
     .sklabel,.pub .yr{color:#4b5563 !important}
-    .row .l p .inst,.idesc a,.pub .venue{color:#0f766e !important}
+    .row .l p .inst,.idesc a,.pub a,.pub .venue{color:#0f766e !important}
+    .pub a{border-bottom:1px solid #0f766e !important}
     .pub .me{color:#000}
     .award .yr{color:#0f766e}
     .chip{background:#f3f4f6 !important;border:1px solid #e5e7eb !important;color:#222 !important}
@@ -648,7 +655,13 @@
   </section>
 
   <section id="publications">
-    <div class="stitle"><span class="en">Selected Publications</span><span class="zh">代表性论文</span></div>
+    <div class="stitle"><span class="en">Selected Publications &amp; Preprints</span><span class="zh">代表性论文与预印本</span></div>
+    <div class="pub">
+      <span class="me">Chen LG*</span>, Sham PC. LRCP: identifying functionally related SNPs and genes from phenome-wide genetic-effect correlations using GWAS summary statistics. <span class="venue">bioRxiv.</span> <span class="yr">2026.</span> <a href="https://doi.org/10.64898/2026.11.02.763742" target="_blank" rel="noopener">doi:10.64898/2026.11.02.763742</a>
+    </div>
+    <div class="pub">
+      <span class="me">Chen LG*</span>, Sham PC. LRCQ: phenome-wide heritability enrichment of genomic loci from GWAS summary statistics. <span class="venue">bioRxiv.</span> <span class="yr">2026.</span> <a href="https://doi.org/10.64898/2026.11.02.763731" target="_blank" rel="noopener">doi:10.64898/2026.11.02.763731</a>
+    </div>
     <div class="pub">
       Hatzikotoulas K, Southam L, …, <span class="me">Chen LG*</span>, …, Zeggini E. Genome-wide analysis in 1,962,069 individuals identifies 962 risk variants and translational opportunities for osteoarthritis. <span class="venue">Nature.</span> <span class="yr">2025.</span>
     </div>
